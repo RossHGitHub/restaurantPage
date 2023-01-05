@@ -1,3 +1,5 @@
+import { aboutUs } from "./about";
+
     export function pageload(){
         
         // Background, HTML and Body tags
@@ -69,17 +71,20 @@
     mainContentRight.appendChild(tabArea);
 
     let aboutUsButton = document.createElement('div');
-    aboutUsButton.classList.add('tabButtons', 'aboutUs');
+    aboutUsButton.classList.add('aboutUs', 'selected');
+    aboutUsButton.id=('aboutUs')
     aboutUsButton.innerHTML='ABOUT';
     mainContentRight.appendChild(aboutUsButton);
 
     let menuButton = document.createElement('div');
-    menuButton.classList.add('tabButtons', 'menu');
+    menuButton.classList.add('menu');
+    menuButton.id=('menu');
     menuButton.innerHTML='MENU';
     mainContentRight.appendChild(menuButton);
 
     let contactUsButton = document.createElement('div');
-    contactUsButton.classList.add('tabButtons', 'contactUs');
+    contactUsButton.classList.add('contactUs');
+    contactUsButton.id=('contact')
     contactUsButton.innerHTML='CONTACT';
     mainContentRight.appendChild(contactUsButton);
 
