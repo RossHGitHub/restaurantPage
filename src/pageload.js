@@ -1,4 +1,6 @@
-    export function pageload(){// Background, HTML and Body tags
+    export function pageload(){
+        
+        // Background, HTML and Body tags
     let body = document.querySelector('body');
     body.classList='body';
     
@@ -60,4 +62,27 @@
     let mainContentRight = document.createElement('div');
     mainContentRight.classList = 'mainContentRight';
     mainContentWrapper.appendChild(mainContentRight);
+
+    let tabArea = document.createElement('div');
+    tabArea.classList='tabArea';
+    tabArea.id='tabArea';
+    mainContentRight.appendChild(tabArea);
+
+    let aboutUsButton = document.createElement('div');
+    aboutUsButton.classList.add('tabButtons', 'aboutUs');
+    aboutUsButton.innerHTML='ABOUT';
+    mainContentRight.appendChild(aboutUsButton);
+
+    let menuButton = document.createElement('div');
+    menuButton.classList.add('tabButtons', 'menu');
+    menuButton.innerHTML='MENU';
+    mainContentRight.appendChild(menuButton);
+
+    let contactUsButton = document.createElement('div');
+    contactUsButton.classList.add('tabButtons', 'contactUs');
+    contactUsButton.innerHTML='CONTACT';
+    mainContentRight.appendChild(contactUsButton);
+
+
     }
+
